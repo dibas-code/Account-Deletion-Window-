@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete alert</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: bisque;
+
+    }
+
+    .container {
+        position: relative;
+        position: relative;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .alert {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+    }
+
+    .alert h3 {
+        font-size: 28px;
+    }
+
+    .alert button {
+        border: none;
+        font-size: 16px;
+        font-weight: bolder;
+        color: white;
+        margin: 20px;
+        padding: 10px;
+    }
+
+    .alert button:hover {
+        opacity: 0.6;
+    }
+
+    .cancel-button {
+        background-color: grey;
+    }
+
+    .confirm-deletation {
+        margin-left: 40px;
+        background-color: red;
+    }
+
+    /* to hide alert window */
+    .alert-hide {
+        display: none;
+    }
+
+    /* to hide and show deletee message */
+    .deletedMessage-hider {
+        display: none;
+    }
+
+
+    .deleted-alert {
+        padding: 10px;
+        width: 400px;
+        height: 100px;
+        background-color: white;
+        box-shadow: 5px 5px rgba(0, 0, 0, 0.499);
+        position: relative;
+        z-index: 1000;
+        font-size: 20px;
+    }
+
+    .cross {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #checkbox {
+        display: none;
+    }
+
+    .deleted-alert p {
+        margin-top: 14px;
+    }
+
+    .deleted-alert .last {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 5px;
+        padding: 0 12px;
+        background-color: grey;
+    }
+
+    .last button {
+        padding: 0px 14px;
+    }
+
+    @media screen and (max-width:500px) {
+        .alert button {
+            margin: 10px;
+        }
+
+        .alert h3 {
+            font-size: 20px;
+        }
+
+        .alert .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .deleted-alert {
+            width: 300px;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <button class="delete-button">Delete Account</button>
+        <div class="alert-hide">
+            <div class="alert">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/017/178/327/small/warning-hazard-sign-on-transparent-background-free-png.png"
+                    alt="">
+                <h3>Your account will be deleted</h3>
+                <h3>Permantly!</h3>
+                <div class="buttons">
+                    <button class="cancel-button">Cancel Progress</button>
+                    <button class="confirm-deletation">Confirm Deletation</button>
+                </div>
+            </div>
+        </div>
+        <div class="deletedMessage-hider">
+            <div class="deleted-alert">
+                <div class="cross">
+                    <span>Atom</span>
+                    <div>
+                        <input id="checkbox" type="checkbox">
+                        <i class="fa fa-close" style="font-size:24px"></i>
+                    </div>
+                </div>
+                <p>your Accound Deleted Successfully</p>
+                <div class="last"><button class="ok-button">ok</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="deleteAccount.js"></script>
+</body>
+
+</html>
